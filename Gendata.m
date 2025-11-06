@@ -1,6 +1,6 @@
 clc,clear,close all
 
-%% % Generate data
+%% % Generate data for script gam_gau, lp and gamma 
 I = imread('cameraman_big.jpg'); I = rgb2gray(I);
 X = im2double(I);
 X = imresize(X,0.5,'nearest');
@@ -34,4 +34,5 @@ noise = sigma * e * norm(X,'fro');
 Y = K + noise; 
 C_Y = dct2(Y);
 noise_var = (sigma^2 * norm(X,'fro')^2) / (m*n); % compute noise variance
+
 
